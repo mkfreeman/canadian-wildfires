@@ -17,5 +17,10 @@
   "bugs": {
     "url": "https://github.com/mkfreeman/canadian-wildfires/issues"
   },
-  "homepage": "https://github.com/mkfreeman/canadian-wildfires#readme"
+  "homepage": "https://github.com/mkfreeman/canadian-wildfires#readme",
+  "dependencies": {
+    "csv-stringify": "^6.4.0",
+    "d3": "^7.8.5",
+    "shapefile": "^0.6.6"
+  }
 }
