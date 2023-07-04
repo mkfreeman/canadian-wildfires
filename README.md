@@ -33,7 +33,14 @@ I'm assuming the features are the same for all years, but I haven't checked.
 First, make sure to install necessary packages:
 `npm install`
 
-Then run `node extract_features.js` to extract features from the geojson files. This will create a file called `data/data.csv` that contains the features we want to analyze.
+Then, **after downloading the shapefiles** via `sh prep_data.sh`, run `node
+extract_features.js` to extract features from the geojson files. This will
+create a file called `data/data.csv` that contains the features we want to
+analyze.
+
+This process now takes about ~30 minutes to complete, as it recursively projects
+all coordinates in the shapefiles to compute the centroid (if you leave out this
+computation, it only takes a minute or two).
 
 ## Province boundaries
 The province [shapefile.zip](https://www12.statcan.gc.ca/census-recensement/2021/geo/sip-pis/boundary-limites/files-fichiers/lpr_000b21a_e.zip) was downloaded from [statistics Canada](https://www12.statcan.gc.ca/census-recensement/2021/geo/sip-pis/boundary-limites/index2021-eng.cfm?year=21). This file was also too large to process using command line tools, so was simplified using the UI tool [mapshaper](https://mapshaper.org/).
